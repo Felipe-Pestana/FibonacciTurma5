@@ -1,30 +1,14 @@
-﻿int pos, penultimo = 0, ultimo = 1, atual;
+﻿int pos, penultimo = -1, ultimo = 1, atual;
 
 Console.WriteLine("Informe a posição limite: ");
 pos = int.Parse(Console.ReadLine());
 
-if (pos == 1)
-    Console.WriteLine(penultimo);
-else
+for (int i = 0; i < pos; i++)
 {
-    if (pos == 2)
-    {
-        Console.WriteLine(penultimo);
-        Console.WriteLine(ultimo);
-    }
-    else
-    {
-        Console.WriteLine(penultimo);
-        Console.WriteLine(ultimo);
-
-        for (int i = 2; i < pos; i++)
-        {
-            atual = penultimo + ultimo;
-            Console.WriteLine(atual);
-            penultimo = ultimo;
-            ultimo = atual;
-        }
-    }
+    atual = penultimo + ultimo;
+    Console.WriteLine(atual);
+    penultimo = ultimo;
+    ultimo = atual;
 }
 
 
